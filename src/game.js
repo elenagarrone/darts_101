@@ -5,23 +5,25 @@ function Board(){
 function Player(){
 	this.score = 501
 	this.darts = 3
-	// this.throwOneScore = 0
-	// this.throwTwoScore = 0
-	// this.throwThreeScore = 0 
 };
 
 
 Player.prototype.hitSingle = function(number) {
-	if (this.darts >= 1) {this.darts -= 1; return this.score -= (number)} else {return this.score}
-	// return this.score -= (number)
+	if (this.darts >= 1) {this.darts -= 1; return this.score -= (number)} else {this._newTurn(); return this.score} 
 };
 
 Player.prototype.hitDouble = function(number){
-	if (this.darts >= 1) {this.darts -= 1; return this.score -= (number * 2)} else {return this.score}
-	// return this.score -= (number * 2)
+	if (this.darts >= 1) {this.darts -= 1; return this.score -= (number * 2)} else {this._newTurn(); return this.score}
 };
 
 Player.prototype.hitTreble = function(number){
-	if (this.darts >= 1) {this.darts -= 1; return this.score -= (number * 3)} else {return this.score}
-	// return this.score -= (number * 2)
+	if (this.darts >= 1) {this.darts -= 1; return this.score -= (number * 3)} else {this._newTurn(); return this.score}
+};
+
+Player.prototype.hitNothing = function(){
+	if (this.darts >= 1) {this.darts -= 1; return this.score} else {	this._newTurn(); return this.score}
+};
+
+Player.prototype._newTurn = function() {
+	return this.darts = 3
 };

@@ -53,12 +53,30 @@ describe ('Board', function(){
 			expect(player.darts).toEqual(0)
 		});
 
+		it ("didn't hit anything", function(){
+			player.hitNothing()
+			expect(player.score).toEqual(501)
+			player.hitSingle(12)
+			expect(player.score).toEqual(489)
+			player.hitNothing()
+			expect(player.score).toEqual(489)
+		});
+
 		it ('has the score not changing if tries to throw a fourth time', function(){
 			player.hitSingle(2)
 			player.hitSingle(16)
 			player.hitSingle(14)
 			player.hitDouble(7)
 			expect(player.score).toEqual(469)
+		});
+
+		it ('after throwing three times, a new turn of dards starts', function(){
+			player.hitSingle(16)
+			player.hitSingle(14)
+			player.hitDouble(7)
+			expect(player.darts).toEqual(0)	
+			player.hitSingle(2)
+			expect(player.darts).toEqual(3)			
 		});
 
 
