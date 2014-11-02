@@ -35,6 +35,17 @@ describe ('Board', function(){
 			expect(player.score).toEqual(486)
 		});
 
+		it ('can hit the outer bullseye', function(){
+			player.hitOuterBullsEye()
+			expect(player.score).toEqual(476)
+		});
+
+
+		it ('can hit the bullseye', function(){
+			player.hitBullsEye()
+			expect(player.score).toEqual(451)
+		});
+
 		it ('has thrown one dart', function(){
 			player.hitSingle(2)
 			expect(player.darts).toEqual(2)

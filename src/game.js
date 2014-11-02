@@ -24,6 +24,14 @@ Player.prototype.hitNothing = function(){
 	if (this.darts >= 1) {this.darts -= 1; return this.score} else {	this._newTurn(); return this.score}
 };
 
+Player.prototype.hitOuterBullsEye= function(){
+	if (this.darts >= 1) {this.darts -= 1; return this.score -= (25)} else {this._newTurn(); return this.score}
+};
+
+Player.prototype.hitBullsEye= function(){
+	if (this.darts >= 1) {this.darts -= 1; return this.score -= (50)} else {this._newTurn(); return this.score}
+};
+
 Player.prototype._newTurn = function() {
 	return this.darts = 3
 };
