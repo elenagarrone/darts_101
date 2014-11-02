@@ -37,4 +37,5 @@ Player.prototype._newTurn = function() {
 };
 
 
+
 // this.score = 0 if this.hitDouble(number)
