@@ -40,7 +40,6 @@ describe ('Board', function(){
 			expect(player.score).toEqual(476)
 		});
 
-
 		it ('can hit the bullseye', function(){
 			player.hitBullsEye()
 			expect(player.score).toEqual(451)
@@ -88,6 +87,20 @@ describe ('Board', function(){
 			expect(player.darts).toEqual(0)	
 			player.hitSingle(2)
 			expect(player.darts).toEqual(3)			
+		});
+
+		xit ('has to hit as last a double to get to a score of 0', function(){
+			player.hitTreble(20)
+			player.hitTreble(20)
+			player.hitTreble(20)
+			player.hitTreble(20)
+			player.hitTreble(20)
+			player.hitTreble(20)
+			player.hitTreble(20)
+			player.hitTreble(20)
+			player.hitSingle(1)
+			player.hitDouble(10)
+			expect(player.score).toEqual(0)
 		});
 
 

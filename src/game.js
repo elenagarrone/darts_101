@@ -21,7 +21,7 @@ Player.prototype.hitTreble = function(number){
 };
 
 Player.prototype.hitNothing = function(){
-	if (this.darts >= 1) {this.darts -= 1; return this.score} else {	this._newTurn(); return this.score}
+	if (this.darts >= 1) {this.darts -= 1; return this.score} else {this._newTurn(); return this.score}
 };
 
 Player.prototype.hitOuterBullsEye= function(){
@@ -35,3 +35,6 @@ Player.prototype.hitBullsEye= function(){
 Player.prototype._newTurn = function() {
 	return this.darts = 3
 };
+
+
+// this.score = 0 if this.hitDouble(number)
