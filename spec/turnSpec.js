@@ -40,7 +40,4 @@ describe('Turn', function(){
       dart.Throw(2, 2)
       expect(turn.totalScore(turn)).toEqual(12)
     });
-
-
-
 });
