@@ -38,7 +38,8 @@ describe ('Player', function(){
 			player.addTurn(turn)
 			player.pointsLeft(turn)
 			expect(player.score).toEqual(0)
-			// expect(player.isWinner()).toEqual(true)
+			player.win()
+			expect(player.isWinner).toEqual(true)
 		});
 
 });

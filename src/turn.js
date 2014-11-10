@@ -12,4 +12,3 @@ Turn.prototype.totalScore = function() {
   } else {return (this.darts[0].score + this.darts[1].score + this.darts[2].score);
   }; 
 };
-

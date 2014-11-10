@@ -1,6 +1,7 @@
 function Player(){
 	this.score = 101
 	this.turns = []
+	this.isWinner = false
 };
 
 Player.prototype.addTurn = function(turn) {
@@ -11,7 +12,7 @@ Player.prototype.pointsLeft = function(turn) {
 	return this.score -= turn.totalScore()
 };
 
-Player.prototype.isWinner = function() {
-	if (this.score = 0){ return true}
+Player.prototype.win = function() {
+	return this.isWinner = true
 };
 
