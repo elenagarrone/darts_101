@@ -16,3 +16,4 @@ Player.prototype.win = function() {
 	return this.isWinner = true
 };
 
+//create the Game with 2 player. player knows when he win and when it's his turn. 
