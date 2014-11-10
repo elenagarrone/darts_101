@@ -4,7 +4,7 @@ function Dart(){
 };
 
 Dart.prototype.Throw = function(points, place) {
-  this.score = points * place
   this.isThrown = true
+  return this.score = points * place
 };
 
