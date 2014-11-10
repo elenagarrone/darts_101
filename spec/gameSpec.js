@@ -1,9 +1,9 @@
-describe ('Board', function(){
+describe ('Game', function(){
 
 		
 		beforeEach(function(){
 			board = new Board;
-			player = new Player;
+			game = new Game;
 		});
 
 	describe ('The board has:', function(){
@@ -18,89 +18,89 @@ describe ('Board', function(){
 
 	});
 
-	describe ('The Player:', function(){
+	describe ('The Game:', function(){
 
-		it ('can hit a single', function(){
-			player.hitSingle(4)
-			expect(player.score).toEqual(497)
+		it ('hit a single', function(){
+			game.hitSingle(4)
+			expect(game.score).toEqual(497)
 		});
 
-		it ('can hit a double', function(){
-			player.hitDouble(6)
-			expect(player.score).toEqual(489)
+		it ('hit a double', function(){
+			game.hitDouble(6)
+			expect(game.score).toEqual(489)
 		});
 
-		it ('can hit a treble', function(){
-			player.hitTreble(5)
-			expect(player.score).toEqual(486)
+		it ('hit a treble', function(){
+			game.hitTreble(5)
+			expect(game.score).toEqual(486)
 		});
 
-		it ('can hit the outer bullseye', function(){
-			player.hitOuterBullsEye()
-			expect(player.score).toEqual(476)
+		it ('hit the outer bullseye', function(){
+			game.hitOuterBullsEye()
+			expect(game.score).toEqual(476)
 		});
 
-		it ('can hit the bullseye', function(){
-			player.hitBullsEye()
-			expect(player.score).toEqual(451)
+		it ('hit the bullseye', function(){
+			game.hitBullsEye()
+			expect(game.score).toEqual(451)
 		});
 
 		it ('has thrown one dart', function(){
-			player.hitSingle(2)
-			expect(player.darts).toEqual(2)
+			game.hitSingle(2)
+			expect(game.darts).toEqual(2)
 		});
 
 		it ('has thrown two darts', function(){
-			player.hitSingle(2)
-			player.hitTreble(16)
-			expect(player.darts).toEqual(1)
+			game.hitSingle(2)
+			game.hitTreble(16)
+			expect(game.darts).toEqual(1)
 		});
 
 		it ('has thrown three darts', function(){
-			player.hitSingle(2)
-			player.hitTreble(16)
-			player.hitTreble(14)
-			expect(player.darts).toEqual(0)
+			game.hitSingle(2)
+			game.hitTreble(16)
+			game.hitTreble(14)
+			expect(game.darts).toEqual(0)
 		});
 
 		it ("didn't hit anything", function(){
-			player.hitNothing()
-			expect(player.score).toEqual(501)
-			player.hitSingle(12)
-			expect(player.score).toEqual(489)
-			player.hitNothing()
-			expect(player.score).toEqual(489)
+			game.hitNothing()
+			expect(game.score).toEqual(501)
+			game.hitSingle(12)
+			expect(game.score).toEqual(489)
+			game.hitNothing()
+			expect(game.score).toEqual(489)
 		});
 
 		it ('has the score not changing if tries to throw a fourth time', function(){
-			player.hitSingle(2)
-			player.hitSingle(16)
-			player.hitSingle(14)
-			player.hitDouble(7)
-			expect(player.score).toEqual(469)
+			game.hitSingle(2)
+			game.hitSingle(16)
+			game.hitSingle(14)
+			game.hitDouble(7)
+			expect(game.score).toEqual(469)
 		});
 
 		it ('after throwing three times, a new turn of dards starts', function(){
-			player.hitSingle(16)
-			player.hitSingle(14)
-			player.hitDouble(7)
-			expect(player.darts).toEqual(0)	
-			player.hitSingle(2)
-			expect(player.darts).toEqual(3)			
+			game.hitSingle(16)
+			game.hitSingle(14)
+			game.hitDouble(7)
+			expect(game.darts).toEqual(0)	
+			game.hitSingle(2)
+			expect(game.darts).toEqual(3)			
 		});
 
 		xit ('has to hit as last a double to get to a score of 0', function(){
-			player.hitTreble(20)
-			player.hitTreble(20)
-			player.hitTreble(20)
-			player.hitTreble(20)
-			player.hitTreble(20)
-			player.hitTreble(20)
-			player.hitTreble(20)
-			player.hitTreble(20)
-			player.hitSingle(1)
-			player.hitDouble(10)
-			expect(player.score).toEqual(0)
+			game.hitTreble(20)
+			game.hitTreble(20)
+			game.hitTreble(20)
+			game.hitTreble(20)
+			game.hitTreble(20)
+			game.hitTreble(20)
+			game.hitTreble(20)
+			game.hitTreble(20)
+			game.hitSingle(1)
+			game.hitDouble(10)
+			expect(game.score).toEqual(0)
 		});
 
 
