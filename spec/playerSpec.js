@@ -1,18 +1,18 @@
-describe ('Game', function(){
+describe ('Player', function(){
 
 	beforeEach(function(){
-		game = new Game();
+		player = new Player();
 		turn = new Turn();
 		dart = new Dart();
 	});
 
 		it ('should have an initial score of 501 points', function(){
-			expect(game.score).toEqual(501)
+			expect(player.score).toEqual(501)
 		});
 
 		it ('should allow to add turns', function(){
-			game.addTurn(turn)
-			expect(game.turns.length).toEqual(1)
+			player.addTurn(turn)
+			expect(player.turns.length).toEqual(1)
 		});
 
 		it ('should know the points left to play', function(){
@@ -22,8 +22,8 @@ describe ('Game', function(){
       dart.Throw(2, 2)
       turn.addDart(dart)
       dart.Throw(2, 2)
-			game.addTurn(turn)
-			expect(game.pointsLeft(turn)).toEqual(489)
+			player.addTurn(turn)
+			expect(player.pointsLeft(turn)).toEqual(489)
 		});
 
 });
