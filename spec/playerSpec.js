@@ -25,7 +25,8 @@ describe ('Player', function(){
       dart3.Throw(2, 2)
 			turn.addDart(dart3)
 			player.addTurn(turn)
-			expect(player.pointsLeft(turn)).toEqual(87)
+      player.pointsLeft(turn)
+			expect(player.score).toEqual(87)
 		});
 
 		it ('should know when it wins', function(){
@@ -38,7 +39,6 @@ describe ('Player', function(){
 			player.addTurn(turn)
 			player.pointsLeft(turn)
 			expect(player.score).toEqual(0)
-			player.win()
 			expect(player.isWinner).toEqual(true)
 		});
 

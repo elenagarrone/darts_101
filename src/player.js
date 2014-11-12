@@ -9,11 +9,7 @@ Player.prototype.addTurn = function(turn) {
 };
 
 Player.prototype.pointsLeft = function(turn) {
-	return this.score -= turn.totalScore()
+  this.score -= turn.totalScore()
+  if (this.score === 0) this.isWinner = true;
 };
 
-Player.prototype.win = function() {
-	return this.isWinner = true
-};
-
-//create the Game with 2 player. player knows when he win and when it's his turn. 
