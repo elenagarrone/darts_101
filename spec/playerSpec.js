@@ -13,7 +13,7 @@ describe ('Player', function(){
     dart3b = new Dart()
 	});
 
-		it ('should have an initial score of 501 points', function(){
+		it ('should have an initial score of 101 points', function(){
 			expect(player.score).toEqual(101)
 		});
 
