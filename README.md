@@ -1,4 +1,4 @@
-Darts 501
+Darts 101
 =========
 
 ![darts_board](http://www.patrickchaplin.com/images/faq/dartboard1.gif)
