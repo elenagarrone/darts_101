@@ -12,8 +12,16 @@ Game.prototype.winner = function(player1, player2) {
   if(player2.isWinner = true) return 'Player2 is the winner'
 };
 
-// Game.prototype.nextTurnTo = function(player, player2){
-//   if (this.players[1].score > this.players[0].score) {
-//     return player2
-//   }
-// }
+Game.prototype.nextTurnTo = function(){
+  if (this._scorePlayer1 > this._scorePlayer2) {
+    return true
+  }
+}
+
+Game.prototype._scorePlayer1 = function() {
+  return this.players[0].score
+};
+
+Game.prototype._scorePlayer2 = function() {
+  return this.players[1].score
+};
