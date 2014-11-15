@@ -13,6 +13,11 @@ describe('Dart', function(){
           expect(dart.isThrown).toBe(true)
         });
 
+        it ('knows if the last throw is a double', function(){
+          makeATurn(turn2)
+          expect(dart.isLastThrowDouble(turn2)).toBe(true)
+        });
+
       describe('should throw a dart and know the score if it hit:', function(){
 
         it ('a single', function(){
@@ -67,6 +72,7 @@ describe('Dart', function(){
           dart.Throw(25, 2)
           expect(dart.isA).toBe('Bullseye');
         });
+
       });
 
 });
