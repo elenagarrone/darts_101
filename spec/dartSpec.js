@@ -57,6 +57,16 @@ describe('Dart', function(){
           dart.Throw(1, 3)
           expect(dart.isA).toBe('Treble');
         });
+
+        it ('outer bullseye', function(){
+          dart.Throw(25, 1)
+          expect(dart.isA).toBe('Outer bullseye');
+        });
+
+        it ('outer bullseye', function(){
+          dart.Throw(25, 2)
+          expect(dart.isA).toBe('Bullseye');
+        });
       });
 
 });
