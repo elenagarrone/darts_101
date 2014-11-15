@@ -57,4 +57,18 @@ describe ('Game', function(){
     expect(game.winner(player, player2)).toEqual('Player1 is the winner')
   });
 
+  it ('should know who is the next player', function(){
+    dart1.Throw(1, 2)
+    turn.addDart(dart1)
+    dart2.Throw(11, 1)
+    turn.addDart(dart2)
+    dart3.Throw(1, 2)
+    turn.addDart(dart3)
+    player.addTurn(turn)
+    player.pointsLeft(turn)
+    makeATurn(turn2)
+    player2.pointsLeft(turn2)
+    expect(game.nextTurnTo(player, player2)).toBe('Player1 is the next one');
+  });
+
 });
