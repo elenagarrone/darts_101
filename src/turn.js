@@ -8,7 +8,7 @@ Turn.prototype.addDart = function(dart) {
 };
 
 Turn.prototype.totalScore = function() {
-    if (this.darts.length < 3 ) {throw('You have to throw 3 darts before requiring the total score');
+  if (this.darts.length < 3 ) {throw('You have to throw 3 darts before requiring the total score');
   } else {return (this.darts[0].score + this.darts[1].score + this.darts[2].score);
   }; 
 };

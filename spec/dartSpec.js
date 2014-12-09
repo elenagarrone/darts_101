@@ -1,78 +1,78 @@
 describe('Dart', function(){
 
-    beforeEach(function(){
-      dart = new Dart()
+  beforeEach(function(){
+    dart = new Dart()
+  });
+
+  it ('should not be thrown when initialized', function(){
+    expect(dart.isThrown).toBe(false)
+  }); 
+
+  it ("should be thrown after it has been thrown", function (){
+    dart.Throw(12, 1)
+    expect(dart.isThrown).toBe(true)
+  });
+
+  it ('knows if the last throw is a double', function(){
+    makeATurn(turn2)
+    expect(dart.isLastThrowDouble(turn2)).toBe(true)
+  });
+
+  describe('should throw a dart and know the score if it hit:', function(){
+
+    it ('a single', function(){
+      dart.Throw(15, 1)
+      expect(dart.score).toEqual(15)
     });
 
-        it ('should not be thrown when initialized', function(){
-          expect(dart.isThrown).toBe(false)
-        }); 
+    it ('a double', function(){
+      dart.Throw(3, 2)
+      expect(dart.score).toEqual(6)
+    });
 
-        it ("should be thrown after it has been thrown", function (){
-          dart.Throw(12, 1)
-          expect(dart.isThrown).toBe(true)
-        });
+    it ('a treble', function(){
+      dart.Throw(3, 3)
+      expect(dart.score).toEqual(9)
+    });
+    
+    it ('the outer bullseye', function(){
+      dart.Throw(25, 1)
+      expect(dart.score).toEqual(25)
+    });
 
-        it ('knows if the last throw is a double', function(){
-          makeATurn(turn2)
-          expect(dart.isLastThrowDouble(turn2)).toBe(true)
-        });
+    it ('the bullseye', function(){
+      dart.Throw(25, 2)
+      expect(dart.score).toEqual(50)
+    });
+  });
 
-      describe('should throw a dart and know the score if it hit:', function(){
+  describe("should know if it's a: ", function(){
 
-        it ('a single', function(){
-          dart.Throw(15, 1)
-          expect(dart.score).toEqual(15)
-        });
+    it ('single', function(){
+      dart.Throw(1, 1)
+      expect(dart.isA).toBe('Single');
+    });
 
-        it ('a double', function(){
-          dart.Throw(3, 2)
-          expect(dart.score).toEqual(6)
-        });
+    it ('double', function(){
+      dart.Throw(1, 2)
+      expect(dart.isA).toBe('Double');
+    });
 
-        it ('a treble', function(){
-          dart.Throw(3, 3)
-          expect(dart.score).toEqual(9)
-        });
-        
-        it ('the outer bullseye', function(){
-          dart.Throw(25, 1)
-          expect(dart.score).toEqual(25)
-        });
+    it ('treble', function(){
+      dart.Throw(1, 3)
+      expect(dart.isA).toBe('Treble');
+    });
 
-        it ('the bullseye', function(){
-          dart.Throw(25, 2)
-          expect(dart.score).toEqual(50)
-        });
-      });
+    it ('outer bullseye', function(){
+      dart.Throw(25, 1)
+      expect(dart.isA).toBe('Outer bullseye');
+    });
 
-      describe("should know if it's a: ", function(){
+    it ('outer bullseye', function(){
+      dart.Throw(25, 2)
+      expect(dart.isA).toBe('Bullseye');
+    });
 
-        it ('single', function(){
-          dart.Throw(1, 1)
-          expect(dart.isA).toBe('Single');
-        });
-
-        it ('double', function(){
-          dart.Throw(1, 2)
-          expect(dart.isA).toBe('Double');
-        });
-
-        it ('treble', function(){
-          dart.Throw(1, 3)
-          expect(dart.isA).toBe('Treble');
-        });
-
-        it ('outer bullseye', function(){
-          dart.Throw(25, 1)
-          expect(dart.isA).toBe('Outer bullseye');
-        });
-
-        it ('outer bullseye', function(){
-          dart.Throw(25, 2)
-          expect(dart.isA).toBe('Bullseye');
-        });
-
-      });
+  });
 
 });
