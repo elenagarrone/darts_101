@@ -44,6 +44,7 @@ describe('Dart', function(){
       dart.throw(25, 2)
       expect(dart.score).toEqual(50)
     });
+
   });
 
   describe("should know if it's a: ", function(){

@@ -51,9 +51,7 @@ describe ('Game', function(){
 
   it ('knows who is the winner between the two players', function(){
     makeScoreToZeroInATurn(turn)
-    player.pointsLeft(turn)
     makeATurn(turn2)
-    player2.pointsLeft(turn2)
     expect(game.winner(player, player2)).toEqual('Player1 is the winner')
   });
 
