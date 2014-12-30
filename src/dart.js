@@ -4,7 +4,7 @@ function Dart(){
   this.isA = ''
 };
 
-Dart.prototype.Throw = function(points, place) {
+Dart.prototype.throw = function(points, place) {
   this.isThrown = true
   if (place === 1) { points === 25 ? this.isA = 'Outer bullseye' : this.isA = 'Single' }
   if (place === 2) { points === 25 ? this.isA = 'Bullseye' : this.isA = 'Double' }

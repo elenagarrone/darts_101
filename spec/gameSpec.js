@@ -15,21 +15,21 @@ describe ('Game', function(){
   });
 
   makeScoreToZeroInATurn = function(turn){
-    dart1.Throw(25, 2)
+    dart1.throw(25, 2)
     turn.addDart(dart1)
-    dart2.Throw(11, 1)
+    dart2.throw(11, 1)
     turn.addDart(dart2)
-    dart3.Throw(20, 2)
+    dart3.throw(20, 2)
     turn.addDart(dart3)
     player.addTurn(turn)
   };
 
   makeATurn = function(turn2){
-    dart1b.Throw(3, 2)
+    dart1b.throw(3, 2)
     turn2.addDart(dart1b)
-    dart2b.Throw(11, 1)
+    dart2b.throw(11, 1)
     turn2.addDart(dart2b)
-    dart3b.Throw(4, 2)
+    dart3b.throw(4, 2)
     turn2.addDart(dart3b)
     player2.addTurn(turn2)
   };

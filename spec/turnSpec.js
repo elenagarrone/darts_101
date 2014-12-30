@@ -23,7 +23,7 @@ describe('Turn', function(){
 
   it ('should know the total score of the dart', function(){
     turn.addDart(dart)
-    dart.Throw(2, 2)
+    dart.throw(2, 2)
     expect(turn.darts[0].score).toEqual(4)
   });
 
@@ -33,12 +33,12 @@ describe('Turn', function(){
 
   it ('should know the total score of the turn', function(){
     turn.addDart(dart)
-    dart.Throw(2, 2)
+    dart.throw(2, 2)
     turn.addDart(dart)
-    dart.Throw(2, 2)
+    dart.throw(2, 2)
     turn.addDart(dart)
-    dart.Throw(2, 2)
+    dart.throw(2, 2)
     expect(turn.totalScore(turn)).toEqual(12)
   });
-    
+
 });
