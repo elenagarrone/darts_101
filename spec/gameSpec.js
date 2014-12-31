@@ -55,9 +55,4 @@ describe ('Game', function(){
     expect(game.winner(player, player2)).toEqual('Player1 is the winner')
   });
 
-  // it ('wins just if the last throw is a double', function(){
-  //   makeScoreToZeroInATurn(turn);
-  //   player.
-  // });
-
 });

@@ -16,6 +16,10 @@ Technologies:
 - JavaScript
 - Jasmine
 
+To do:
+------
+- the last dart thrown must land in a double or the bullseye
+
 How to use:
 -----------
 Clone the repo:
