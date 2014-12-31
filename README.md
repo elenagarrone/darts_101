@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/elenagarrone/darts_101/badges/gpa.svg)](https://codeclimate.com/github/elenagarrone/darts_101)
+
 Darts 101
 =========
 As challange for week 5 I decided to build the 'darts 101' game (instead of 'bowling') using JavaScript and Jasmine for testing.
@@ -28,7 +30,7 @@ Play with it on the console:
 ```shell
 $ open SpecRunner.html
 ```
-Right click on the page and select 'inspect element', then 'console'. 
+Right click on the page and select 'inspect element', then 'console'.
 
 How to test it:
 --------------
