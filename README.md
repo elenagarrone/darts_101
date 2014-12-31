@@ -1,8 +1,38 @@
 Darts 101
 =========
+As challange for week 5 I decided to build the 'darts 101' game (instead of 'bowling') using JavaScript and Jasmine for testing.
 
 ![darts_board](http://www.patrickchaplin.com/images/faq/dartboard1.gif)
 
-Each player starts with a score of 501 and takes turns to throw 3 darts.  The score for each turn is calculated and deducted from the players total.  Bullseye scores 50, the outer ring scores 25 and a dart in the double or treble ring counts double or treble the segment score.  The objective is to be the first player to reduce the score to exactly zero, the only caveat being that the last dart thrown must land in a double or the bullseye. 
+Specification:
+--------------
 
-If a player reduces the score to 1 or goes below zero, the score is bust, that turn ends immediately and the score is returned to what it was at the start of that turn.  e.g. if a player has 32 to go out and the first dart is a 16, the second is a 15, the player is bust and the score is returned to 32.  So on the last turn, it is not necessary to throw all 3 darts - a player can win with the first or second dart of the turn.
+Each player starts with a score of 101 and takes turns to throw 3 darts.  The score for each turn is calculated and deducted from the players total.  Bullseye scores 50, the outer ring scores 25 and a dart in the double or treble ring counts double or treble the segment score.  The objective is to be the first player to reduce the score to exactly zero, the only caveat being that the last dart thrown must land in a double or the bullseye.
+
+Technologies:
+-------------
+- JavaScript
+- Jasmine
+
+How to use:
+-----------
+Clone the repo:
+```shell
+$ git clone https://github.com/elenagarrone/darts_101.git
+```
+Change into the directory:
+```shell
+$ cd darts_101
+```
+Play with it on the console:
+```shell
+$ open SpecRunner.html
+```
+Right click on the page and select 'inspect element', then 'console'. 
+
+How to test it:
+--------------
+Run:
+```shell
+$ open SpecRunner.html
+```
