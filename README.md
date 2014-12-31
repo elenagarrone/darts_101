@@ -34,7 +34,7 @@ Play with it on the console:
 ```shell
 $ open SpecRunner.html
 ```
-Right click on the page and select 'inspect element', then 'console'.
+Right click on the page and select 'Inspect element', then click on 'Console'.
 
 How to test it:
 --------------
